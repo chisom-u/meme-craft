@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>MemeCraft</title>
+
+    <!-- Link to the external CSS file for styling -->
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <!-- Main heading of the webpage -->
+    <h1>M e m e C r a f t</h1>
+
+    <!-- Controls for uploading image and entering text -->
+    <div id="controls">
+        <!-- Image file input, only accepts image files -->
+        <label for="imageInput" id="customFileLabel">Upload Meme Template</label>         
+        <input type="file" id="imageInput" accept="image/*">
+
+        <!-- Button to add random meme on the canvas -->
+        <button id="randomMemeBtn">Random Meme Template</button>        
+
+        <!-- Input for text, buttons to add and delete -->
+        <input type="text" id="addTextInput" placeholder="Enter text">
+        <button id="addTextBtn">Add Text</button>
+        <button id="deleteTextBtn">Delete Text</button>
+
+        <!-- Button to generate the meme on the canvas -->
+        <button id="generateBtn">Generate Meme</button>
+
+        <!-- Button to download the generated meme -->
+        <button id="downloadBtn">Download Meme</button>
+
+        <!-- Text Color Picker -->
+         <label for="textColor"> Text Color:</label>
+         <input type="color" id="textColor" value="#FFFFFF">
+
+        <!-- Font Selector -->
+        <label for="textFont"> Text Font:</label>
+        <select id="fontSelect">
+            <option value="Impact">Impact (Classic Meme Font)</option>
+            <option value="Arial">Arial</option>
+            <option value="Comic Sans MS">Comic Sans</option>
+            <option value="Times New Roman">Times New Roman</option>
+            <option value="Courier New">Courier</option>
+        </select>
+
+        <!-- Text Size Slider-->
+        <label for="textSize">Text Size:</label>
+        <input type="range" id="textSize" min="20" max="60" value="40">
+    </div>
+
+    <!-- Canvas element where the meme will be displayed -->
+    <canvas id="memeCanvas" width="500" height="500"></canvas>
+
+    <!-- Link to the external JavaScript file -->
+    <script src="script.js"></script>
+</body>
+</html>

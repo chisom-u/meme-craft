@@ -1,0 +1,113 @@
+/* Import Google Font for clean, modern look */
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Condensed:wght@400;700&display=swap');
+
+/* Style the entire page */
+body {
+    font-family: 'Roboto Condensed', sans-serif; /* Modern, easy-to-read font */
+    text-align: center;                          /* Center all text and content */
+    background: linear-gradient(135deg, #1e1e1e, #2c3e50); /* Dark gradient background for depth */
+    color: #fff;                                 /* White text for contrast */
+    min-height: 100vh;                           /* Ensure page takes full height */
+    margin: 0;                                   /* Remove default browser margin */
+    display: flex;                               /* Use Flexbox for easy centering */
+    flex-direction: column;                     /* Stack elements vertically */
+    align-items: center;                        /* Center elements horizontally */
+    justify-content: center;                    /* Center content vertically */
+}
+
+/* Container holding all the input controls */
+#controls {
+    background: rgba(255, 255, 255, 0.05);      /* Slight translucent background for contrast */
+    padding: 20px;                              /* Space inside the container */
+    border-radius: 10px;                        /* Rounded corners for a modern look */
+    backdrop-filter: blur(5px);                 /* Subtle background blur effect */
+    box-shadow: 0 0 10px rgba(0,0,0,0.4);       /* Soft shadow for depth */
+    margin-bottom: 20px;                        /* Space between controls and canvas */
+    max-width: 90%;                             /* Keep container responsive */
+}
+
+/* Style for text input fields */
+input[type="text"] {
+    margin: 8px;                                /* Space around inputs */
+    padding: 10px;                              /* Comfortable inner spacing */
+    border-radius: 5px;                         /* Rounded corners */
+    border: none;                               /* Remove default borders */
+    width: 200px;                               /* Standard input width */
+    max-width: 80%;                            /* Responsive width on smaller screens */
+}
+
+/* Hide the default file input for custom styling */
+input[type="file"] {
+    display: none;
+}
+
+/* Custom label styled to look like a button for file input */
+#customFileLabel {
+    display: inline-block;                     /* Make label behave like a block/button */
+    margin: 8px;                               /* Space around the label */
+    padding: 10px 20px;                        /* Inner spacing */
+    border-radius: 5px;                        /* Rounded corners */
+    background: #3498db;                       /* Blue background color */
+    color: white;                              /* White text */
+    /*font-weight: bold;                         /* Bold text */
+    cursor: pointer;                           /* Pointer cursor on hover */
+    transition: background 0.3s ease, box-shadow 0.3s ease; /* Smooth hover effect */
+}
+
+/* Glow effect for file input button on hover */
+#customFileLabel:hover {
+    background: #2980b9;                       /* Slightly darker blue */
+    box-shadow: 0 0 10px #3498db;              /* Blue glow effect */
+}
+
+/* Style for the main buttons (Generate, Download) */
+button {
+    margin: 8px;                               /* Space around buttons */
+    padding: 10px 20px;                       /* Comfortable inner spacing */
+    border: none;                             /* Remove default borders */
+    border-radius: 5px;                       /* Rounded corners */
+    background: #3498db;                      /* Blue background */
+    color: white;                             /* White text */
+    /*font-weight: bold;                        /* Bold text */
+    cursor: pointer;                          /* Pointer cursor */
+    transition: background 0.3s ease, box-shadow 0.3s ease; /* Smooth hover effect */
+}
+
+/* Style for color picker and font selector */
+#textColor, #fontSelect {
+    margin: 8px;
+    padding: 0px;
+    border-radius: 5px;
+    border: none;
+    cursor: pointer;
+    max-width: 80%;
+}
+
+/* Glow effect for buttons on hover */
+button:hover {
+    background: #2980b9;                      /* Darker blue */
+    box-shadow: 0 0 15px #3498db;             /* Blue glow */
+}
+
+/* Style for the meme display canvas */
+#memeCanvas {
+    border: 2px solid #fff;                   /* White border for visibility */
+    margin-top: 20px;                         /* Space above the canvas */
+    max-width: 90%;                           /* Responsive width */
+    height: auto;                             /* Maintain image aspect ratio */
+    opacity: 0;                               /* Hidden by default for animation */
+    transform: scale(0.95);                   /* Slightly scaled down initially */
+    transition: opacity 0.5s ease, transform 0.5s ease; /* Smooth fade & scale animation */
+}
+
+/* Style for text size slider */
+#textSize {
+    margin: 8px;
+    width: 200px;
+}
+
+/* Class to reveal the canvas with animation */
+#memeCanvas.show {
+    opacity: 1;                               /* Fully visible */
+    transform: scale(1);                     /* Back to normal size */
+}
